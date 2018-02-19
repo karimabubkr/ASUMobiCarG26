@@ -1,7 +1,7 @@
   int ledr=4;
   int ledw=6;
   int ledg=5; 
-  int ledy=7; 
+ 
   
   
   
@@ -9,7 +9,6 @@
 pinMode(ledr,OUTPUT);
 pinMode(ledw,OUTPUT);
 pinMode(ledg,OUTPUT);
-pinMode(ledy,OUTPUT);
 
 }
 
@@ -28,9 +27,10 @@ void loop() {
     digitalWrite(ledg,HIGH);
     delay(1000);
     digitalWrite(ledg,LOW);
-    digitalWrite(ledy,HIGH);
+    digitalWrite(ledw,HIGH);
     delay(1000);
-    digitalWrite(ledy,LOW);
+    digitalWrite(ledw,LOW);
+  }
     
   
 }
