@@ -1,7 +1,6 @@
 // example "light sensor led"
 /*
-using photoresistor to sense the light intensity and lights
-a led with the crossponding measured intennsity.
+using photoresistor to sense the light intensity and lightsing led with the crossponding measured intensity.
 */
 
 // defining led pin with pulse width modulation "PWD"
