@@ -1,0 +1,40 @@
+int i , j ;
+
+
+void setup() {
+  // put your setup code here, to run once:
+
+  for ( i = 4 ; i < 8 ; i++ )
+  {
+    
+    pinMode( i , OUTPUT );
+    
+  }
+
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+
+  for ( j = 4 ; j < 8 ; j++ )
+  { 
+    digitalWrite( j , HIGH );
+    delay( 1000 );
+    digitalWrite( j , LOW );
+    
+  }
+
+    delay( 1000 );
+
+  for ( j = 7 ; j > 3 ; j-- )
+  {
+    digitalWrite( j , HIGH );
+    delay( 1000 );
+    digitalWrite( j , LOW );
+    
+  }
+
+  delay( 1000 );
+  
+
+}
