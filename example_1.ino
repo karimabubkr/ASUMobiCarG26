@@ -1,7 +1,8 @@
 
 /* This program makes an electronic circuit acts as an indicator through 4 green LEDs indicating how much
   of a certain potentiometer ( in percentage ) is being used but in ranges of each quarter in this potentiometer
-  i.e ( from 0% to 25%  or  from 25% to 50%  or  ... etc  ) and the Vcc is set to 5 volts
+  i.e ( from 0% to 25%  or  from 25% to 50%  or  ... etc  ) and the Vcc is set to 5 volts as the program is made 
+  to drive the circuit correctly at 5 volts as Vcc
  */
 
 int i ;
