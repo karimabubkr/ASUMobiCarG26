@@ -1,5 +1,5 @@
- trigPin = 12;
- echoPin = 13;
+int trigPin = 12;
+int echoPin = 13;
 int Buzzer = 8;
 int duration, distance;
 
