@@ -1,4 +1,4 @@
-// example "Blinnking led with a push button"
+// Example "Blinking led with a push button"
 
 /*
 using a button if clicked then the led starts blinking, 
