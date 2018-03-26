@@ -61,36 +61,3 @@ void loop()
    
  }
  
- if(results.value==0x1ff7887 || results.value==0x1ff7887){ analogWrite(6, 255);
- 
-   analogWrite(5, 80);
-   analogWrite(9, 0);
- analogWrite(10, 0);
- 
- } 
- 
- if(results.value==0x1ff708f || results.value==0x1ff708f){ analogWrite(10, 255);
- 
-   analogWrite(9, 80);
-   analogWrite(6, 0);
- analogWrite(5, 0);
- 
- }
- 
- if(results.value==0x1fff00f || results.value==0x1fff00f){ analogWrite(9, 255);
- 
-   analogWrite(10, 80);
-   analogWrite(6, 0);
- analogWrite(5, 0);
- 
- }
- 
-  if(results.value==0x1fff807 || results.value==0x1fff807){ analogWrite(6, 0);
-  analogWrite(5, 0);
- analogWrite(9, 0);
-   analogWrite(10, 0);
-}
-
-}
-  
-  
