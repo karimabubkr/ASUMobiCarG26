@@ -8,6 +8,7 @@ int enr = 10;//enable left
 int pin8 = 8;//A2
 int pin9 = 9;//A1
 
+
 //bluetooth 
 char BluetoothData;
 
@@ -23,10 +24,13 @@ void setup(){
   
   
   Serial.begin(9600);
-  }
+
+}
 
 // Driving functions
-void Stop(){
+
+void Stop()
+{
 digitalWrite(led,LOW);
 digitalWrite(pin6,LOW);
 digitalWrite(pin7,LOW);
@@ -34,7 +38,8 @@ digitalWrite(pin8,LOW);
 digitalWrite(pin9,LOW);
 }
 
-void turn_right(){
+void turn_right()
+{
 digitalWrite(led,HIGH);
 digitalWrite(pin6,HIGH);
 digitalWrite(pin7,LOW);
@@ -42,7 +47,8 @@ digitalWrite(pin8,LOW);
 digitalWrite(pin9,LOW);
 }
   
-void forward(){
+void forward()
+{
 digitalWrite(led,HIGH);
 digitalWrite(pin6,HIGH);
 digitalWrite(pin7,LOW);
@@ -50,7 +56,8 @@ digitalWrite(pin8,HIGH);
 digitalWrite(pin9,LOW);
 }
 
-void backward(){ 
+void backward
+(){ 
 digitalWrite(led,HIGH);
 digitalWrite(pin6,LOW);
 digitalWrite(pin7,HIGH);
@@ -58,7 +65,8 @@ digitalWrite(pin8,LOW);
 digitalWrite(pin9,HIGH);
 }
 
-void turn_left(){
+void turn_left()
+{
 digitalWrite(led,HIGH);
 digitalWrite(pin6,LOW);
 digitalWrite(pin7,LOW);
@@ -67,7 +75,8 @@ digitalWrite(pin9,LOW);
 }
 
 //shapes functions
-void shapes(){
+void shapes()
+{
    analogWrite(enl,160);
    analogWrite(enr,160);
    // circle Right shape function
@@ -82,7 +91,8 @@ void shapes(){
   digitalWrite(pin8,HIGH);
   digitalWrite(pin9,LOW);
   delay(3630);
-
+  
+  
   Stop();
 }
 void loop() {
@@ -90,7 +100,8 @@ void loop() {
   digitalWrite(enl,HIGH);
   digitalWrite(enr,HIGH);
   
-  //easy drive  
+  //easy drive
+  
   if(BluetoothData=='B'){
    backward();
   }
@@ -112,7 +123,9 @@ void loop() {
   }
 
   if(BluetoothData=='W'){
+   
     shapes();
+    
   } 
 
 
