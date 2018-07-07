@@ -2,6 +2,7 @@
  * shapes
  * 28/6/2018
  * 
+ 
 */
 
 
@@ -30,6 +31,7 @@ void setup()
   
  //motor
  
+  
   pinMode(pin6,OUTPUT);
   pinMode(pin7,OUTPUT);
   pinMode(pin8,OUTPUT);
@@ -39,7 +41,8 @@ void setup()
   
   
   Serial.begin(9600);
-  }
+  
+}
 
 // Driving functions
 
@@ -50,6 +53,7 @@ digitalWrite(pin6,LOW);
 digitalWrite(pin7,LOW);
 digitalWrite(pin8,LOW);
 digitalWrite(pin9,LOW);
+
 }
 
 void turn_right()
@@ -59,15 +63,19 @@ digitalWrite(pin6,HIGH);
 digitalWrite(pin7,LOW);
 digitalWrite(pin8,LOW);
 digitalWrite(pin9,LOW);
+
 }
   
 void forward()
+
 {
-digitalWrite(led,HIGH);
+
+  digitalWrite(led,HIGH);
 digitalWrite(pin6,HIGH);
 digitalWrite(pin7,LOW);
 digitalWrite(pin8,HIGH);
 digitalWrite(pin9,LOW);
+
 }
 
 void backward(){ 
@@ -76,23 +84,29 @@ digitalWrite(pin6,LOW);
 digitalWrite(pin7,HIGH);
 digitalWrite(pin8,LOW);
 digitalWrite(pin9,HIGH);
+
 }
 
 void turn_left()
+
 {
-digitalWrite(led,HIGH);
+
+  digitalWrite(led,HIGH);
 digitalWrite(pin6,LOW);
 digitalWrite(pin7,LOW);
 digitalWrite(pin8,HIGH);
 digitalWrite(pin9,LOW);
+
 }
 
 //shapes functions
 
 void shapes()
+
 {
 
   //Rectangle shape function
+
   analogWrite(enl,160);
   analogWrite(enr,160);
  
@@ -146,7 +160,8 @@ void shapes()
   Stop();
   delay(5000);
  
-//inf shape function
+
+  //inf shape function
   
   forward();
   delay(50);
@@ -161,7 +176,10 @@ void shapes()
   delay(3350);
  
   
-  analogWrite(enr,160);    //left circle
+  analogWrite(enr,160);    
+  
+  //left circle
+  
   analogWrite(enl,50);
 
   digitalWrite(pin6,HIGH);
@@ -175,29 +193,39 @@ void shapes()
 
 
 void loop()
+
 {
+
   BluetoothData = Serial.read();
   digitalWrite(enl,HIGH);
   digitalWrite(enr,HIGH);
   
   //easy drive  
-  if(BluetoothData=='B'){
+  
+  if(BluetoothData=='B')
+  {
+    
    backward();
+  
   }
   
-  if(BluetoothData=='F'){
+  if(BluetoothData=='F')
+  {
     forward();
   }
   
-  if(BluetoothData=='L'){
+  if(BluetoothData=='L')
+  {
     turn_left();
   }
   
-  if(BluetoothData=='R'){
+  if(BluetoothData=='R')
+  {
     turn_right();
   }
       
-  if(BluetoothData=='S'){
+  if(BluetoothData=='S')
+  {
     Stop();
   }
 
@@ -207,3 +235,6 @@ void loop()
 
 
 }
+
+
+
